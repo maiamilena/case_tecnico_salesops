@@ -13,17 +13,7 @@ from pathlib import Path
 
 
 def load_dataset(file_name: str = "db_case_sales_ops.xlsx"):
-    """
-    Carrega o dataset do case de RevOps de forma portátil.
-    
-    Args:
-        file_name (str): Nome do arquivo dentro da pasta /data.
-        
-    Returns:
-        pd.DataFrame: DataFrame carregado.
-    """
 
-    # Caminho raiz do projeto (onde está o README.md)
     root = Path(__file__).resolve().parent.parent
 
     data_path = root / "data" / file_name
@@ -31,7 +21,7 @@ def load_dataset(file_name: str = "db_case_sales_ops.xlsx"):
     if not data_path.exists():
         raise FileNotFoundError(
             f"❌ Arquivo não encontrado em {data_path}\n"
-            "Verifique se o arquivo está na pasta /data."
+            "Verifique."
         )
 
     print(f"📁 Carregando arquivo: {data_path}")
