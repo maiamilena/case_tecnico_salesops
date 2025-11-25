@@ -1,6 +1,4 @@
 """
-load_data.py
-Carregamento inteligente e portátil dos dados do case de RevOps.
 
 Este script:
 - detecta automaticamente o caminho correto do arquivo .xlsx
@@ -8,8 +6,6 @@ Este script:
 - carrega o dataset em um DataFrame
 - cria diretório processed/ se necessário
 - deixa tudo pronto para uso em qualquer máquina
-
-Autor: Milena (com ChatGPT)
 """
 
 import pandas as pd
