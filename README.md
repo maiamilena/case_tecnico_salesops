@@ -33,7 +33,7 @@ O projeto foi estruturado seguindo as melhores práticas de Engenharia de Dados 
 
 A organização dos diretórios foi pensada para garantir reprodutibilidade e clareza:
 
-```case_livance_revops
+```
 ├── 📂 docs/                  # Conteudo html ydataprofile 
 ├── 📂 data/                  # Dados brutos (Excel) - Input original
 ├── 📂 processed/             # Dados limpos e transformados (CSV) - Data Mart
@@ -47,7 +47,7 @@ A organização dos diretórios foi pensada para garantir reprodutibilidade e cl
 ├── 📂 scripts/
 │   └── load_data.py          # Script auxiliar para carregamento robusto de arquivos
 └── README.md
-
+```
 
 ## 📊 Relatórios de Análise Exploratória de Dados (EDA)
 
