@@ -31,7 +31,8 @@ O projeto foi estruturado seguindo as melhores práticas de Engenharia de Dados 
 
 A organização dos diretórios foi pensada para garantir reprodutibilidade e clareza:
 
-```plaintext
+```case_livance_revops
+├── 📂 docs/                  # Conteudo html ydataprofile 
 ├── 📂 data/                  # Dados brutos (Excel) - Input original
 ├── 📂 processed/             # Dados limpos e transformados (CSV) - Data Mart
 ├── 📂 notebooks/
@@ -46,8 +47,27 @@ A organização dos diretórios foi pensada para garantir reprodutibilidade e cl
 └── README.md
 
 
+##  Relatórios de Análise Exploratória de Dados (EDA)
 
-# Principais Insights e Resultados
+Os relatórios detalhados de Análise Exploratória de Dados (EDA), gerados pela biblioteca **ydata-profiling**, estão disponíveis para visualização interativa através do GitHub Pages.
+
+Esses relatórios contêm uma visão completa da dos dados brutos.
+
+---
+
+### **Acesso Rápido aos Relatórios Interativos**
+
+| Conjunto de Dados | Link para o Relatório |
+| :--- | :--- |
+| **Geral / Overview** | [Visualizar Relatório Geral](https://maiamilena.github.io/case_tecnico_salesops/relatorio_geral.html) |
+| **Leads** | [Visualizar Relatório de Leads](https://maiamilena.github.io/case_tecnico_salesops/relatorio_lead.html) |
+| **Visitas** | [Visualizar Relatório de Visitas](https://maiamilena.github.io/case_tecnico_salesops/relatorio_visitas.html) |
+| **Contratos** | [Visualizar Relatório de Contratos](https://maiamilena.github.io/case_tecnico_salesops/relatorio_contratos.html) |
+
+
+---
+
+ Principais Insights e Resultados
 Após processar e cruzar as bases de Leads, Visitas e Contratos, cheguei aos seguintes diagnósticos estratégicos:
 
 1. O Gargalo do Funil 
