@@ -1,10 +1,12 @@
-# 📊 Sales Ops Analytics: Otimizando o Funil de Vendas
+# 🚀 Sales Ops Analytics: Otimizando o Funil de Vendas
 
 Olá! Seja bem-vindo(a) ao meu projeto de **Sales Operations & Analytics**. 
 
 Este repositório contém uma solução completa de dados — desde a engenharia até a visualização — simulando um cenário real de **Revenue Operations (RevOps)**. O objetivo foi analisar o ciclo de vida de mais de 50.000 leads, identificar gargalos no funil comercial e fornecer insights acionáveis para escalar a operação.
 
-# Desafio de Negócio
+---
+
+## Desafio de Negócio
 
 A empresa precisava de respostas claras para direcionar seus esforços de vendas e marketing. Minha missão foi responder:
 
@@ -15,7 +17,7 @@ A empresa precisava de respostas claras para direcionar seus esforços de vendas
 
 ---
 
-# Tecnologias e Ferramentas Utilizadas
+## Tecnologias e Ferramentas Utilizadas
 
 O projeto foi estruturado seguindo as melhores práticas de Engenharia de Dados e Analytics:
 
@@ -23,77 +25,71 @@ O projeto foi estruturado seguindo as melhores práticas de Engenharia de Dados 
 * **Linguagem de Consulta:** SQL (Sintaxe compatível com BigQuery/SQLite via PandasQL).
 * **Ambiente:** Jupyter Notebooks.
 * **Engenharia:** Pipelines de ETL, tratamento de nulos, padronização de tipos e deduplicação de dados.
-* **Exploração:** Profiling automatizado com YData Profiling.
+* **Exploração:** Profiling automatizado com **YData Profiling**.
 
 ---
 
-# Estrutura do Projeto
+## Estrutura do Projeto
 
 A organização dos diretórios foi pensada para garantir reprodutibilidade e clareza:
 
 ```case_livance_revops
-├── 📂 docs/                  # Conteudo html ydataprofile 
-├── 📂 data/                  # Dados brutos (Excel) - Input original
-├── 📂 processed/             # Dados limpos e transformados (CSV) - Data Mart
+├── 📂 docs/                  # Conteudo html ydataprofile 
+├── 📂 data/                  # Dados brutos (Excel) - Input original
+├── 📂 processed/             # Dados limpos e transformados (CSV) - Data Mart
 ├── 📂 notebooks/
-│   ├── 01_etl_exploracao.ipynb  # Profiling inicial e entendimento dos dados
-│   ├── 02_etl_limpeza.ipynb     # Pipeline de limpeza e tratamento
-│   ├── 03_analises.ipynb        # Cálculos de KPIs, Funil e Lógica de Negócio
-│   └── 04_dashboard.ipynb       # Visualização de dados e Storytelling
+│   ├── 01_etl_exploracao.ipynb  # Profiling inicial e entendimento dos dados
+│   ├── 02_etl_limpeza.ipynb     # Pipeline de limpeza e tratamento
+│   ├── 03_analises.ipynb        # Cálculos de KPIs, Funil e Lógica de Negócio
+│   └── 04_dashboard.ipynb       # Visualização de dados e Storytelling
 ├── 📂 queries/
-│   └── analise_safra.sql     # Query SQL avançada para análise de Cohort (Safra)
+│   └── analise_safra.sql     # Query SQL avançada para análise de Cohort (Safra)
 ├── 📂 scripts/
-│   └── load_data.py          # Script auxiliar para carregamento robusto de arquivos
+│   └── load_data.py          # Script auxiliar para carregamento robusto de arquivos
 └── README.md
 
 
-##  Relatórios de Análise Exploratória de Dados (EDA)
+## 📊 Relatórios de Análise Exploratória de Dados (EDA)
 
 Os relatórios detalhados de Análise Exploratória de Dados (EDA), gerados pela biblioteca **ydata-profiling**, estão disponíveis para visualização interativa através do GitHub Pages.
 
-Esses relatórios contêm uma visão completa da dos dados brutos.
+Esses relatórios contêm uma visão completa dos dados brutos.
 
----
-
-### **Acesso Rápido aos Relatórios Interativos**
+### Acesso Rápido aos Relatórios Interativos
 
 | Conjunto de Dados | Link para o Relatório |
 | :--- | :--- |
-| **Geral / Overview** | [Visualizar Relatório Geral](https://maiamilena.github.io/case_tecnico_salesops/relatorio_geral.html) |
-| **Leads** | [Visualizar Relatório de Leads](https://maiamilena.github.io/case_tecnico_salesops/relatorio_lead.html) |
-| **Visitas** | [Visualizar Relatório de Visitas](https://maiamilena.github.io/case_tecnico_salesops/relatorio_visitas.html) |
-| **Contratos** | [Visualizar Relatório de Contratos](https://maiamilena.github.io/case_tecnico_salesops/relatorio_contratos.html) |
-
+| Geral / Overview | [Visualizar Relatório Geral](https://maiamilena.github.io/case_tecnico_salesops/relatorio_geral.html) |
+| Leads | [Visualizar Relatório de Leads](https://maiamilena.github.io/case_tecnico_salesops/relatorio_lead.html) |
+| Visitas | [Visualizar Relatório de Visitas](https://maiamilena.github.io/case_tecnico_salesops/relatorio_visitas.html) |
+| Contratos | [Visualizar Relatório de Contratos](https://maiamilena.github.io/case_tecnico_salesops/relatorio_contratos.html) |
 
 ---
 
- Principais Insights e Resultados
+## Principais Insights e Resultados
+
 Após processar e cruzar as bases de Leads, Visitas e Contratos, cheguei aos seguintes diagnósticos estratégicos:
 
-1. O Gargalo do Funil 
+### 1. O Gargalo do Funil
 Identificamos que o maior ponto de atrito está no agendamento de visitas.
 
-Lead → Visita: 17.50% (Taxa crítica identificada).
+* **Lead → Visita:** 17.50% (Taxa crítica identificada).
+* **Visita → Venda:** 68.10% (Time de fechamento com alta eficiência).
+* **Conversão Global:** 11.91%.
 
-Visita → Venda: 68.10% (Time de fechamento com alta eficiência).
+> **Ação sugerida:** Revisar a qualificação dos leads (SDRs) antes de passá-los para agendamento.
 
-Conversão Global: 11.91%.
+### 2. A Força dos Canais
+* **Google:** Campeão de volume, trazendo cerca de 37% de todos os leads.
+* **Indicação:** Apresentou a maior taxa de conversão final, validando a importância de estratégias de *member-get-member*.
 
-Ação sugerida: Revisar a qualificação dos leads (SDRs) antes de passá-los para agendamento.
+### 3. Análise de Safra (Cohort Analysis)
+Desenvolvi uma query SQL robusta (`analise_safra.sql`) que isola o comportamento das safras do segundo semestre de 2024. Isso permitiu calcular a conversão real de cada mês, sem o viés de vendas que ainda não aconteceram (maturação do lead).
 
-2. A Força dos Canais 
-Google: Campeão de volume, trazendo cerca de 37% de todos os leads.
+## Visualizações
 
-Indicação: Apresentou a maior taxa de conversão final, validando a importância de estratégias de member-get-member.
+O projeto conta com visualizações estratégicas geradas no `dashboard.ipynb`:
 
-3. Análise de Safra (Cohort Analysis) 
-Desenvolvi uma query SQL robusta (analise_safra.sql) que isola o comportamento das safras do segundo semestre de 2024. Isso permitiu calcular a conversão real de cada mês, sem o viés de vendas que ainda não aconteceram (maturação do lead).
-
-Visualizações
-O projeto conta com visualizações estratégicas geradas no dashboard.ipynb:
-
-Meta vs. Realizado: Gráfico de eixo duplo combinando barras (valores absolutos) e linha (percentual de atingimento) para monitoramento de metas.
-
-Funil de Conversão: Visualização clássica de funil para identificar a perda de volume entre as etapas.
-
-Performance por Canal: Comparativo de volume e eficiência por origem de tráfego.
+* **Meta vs. Realizado:** Gráfico de eixo duplo combinando barras (valores absolutos) e linha (percentual de atingimento) para monitoramento de metas.
+* **Funil de Conversão:** Visualização clássica de funil para identificar a perda de volume entre as etapas.
+* **Performance por Canal:** Comparativo de volume e eficiência por origem de tráfego.
